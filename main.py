@@ -40,13 +40,13 @@ def product_page(request: Request, product_id: int):
     product = db.query(Product).filter(Product.id == product_id).first()
 
     return templates.TemplateResponse(
-        "product.html",
-        {
+        request=request,
+        name="product.html",
+        context={
             "request": request,
             "product": product
         }
     )
-
 
 @app.get("/contact")
 def contact(request: Request):
