@@ -23,12 +23,13 @@ def home(request: Request):
     products = db.query(Product).all()
 
     return templates.TemplateResponse(
-        "index.html",
-        {
-            "request": request,
-            "products": products
-        }
-    )
+    request=request,
+    name="index.html",
+    context={
+        "request": request,
+        "products": products
+    }
+)
 
 
 @app.get("/product/{product_id}")
