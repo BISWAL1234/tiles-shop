@@ -63,8 +63,9 @@ def contact(request: Request):
 def admin_page(request: Request):
 
     return templates.TemplateResponse(
-        "admin.html",
-        {
+        request=request,
+        name="admin.html",
+        context={
             "request": request
         }
     )
