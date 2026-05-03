@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tiles Shop</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav>
+    <h1>Tiles Shop</h1>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/contact">Contact</a>
+    </div>
+</nav>
+
+<div class="container">
+
+{% for product in products %}
+
+<div class="card">
+
+    <img src="/static/images/{{ product.image }}">
+
+    <h2>{{ product.name }}</h2>
+
+    <p>{{ product.price }}</p>
+
+    <a href="/product/{{ product.id }}">
+        <button>View Details</button>
+    </a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</body>
+</html>

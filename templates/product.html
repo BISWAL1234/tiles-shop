@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ product.name }}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<nav>
+    <h1>Tiles Shop</h1>
+
+    <div>
+        <a href="/">Home</a>
+        <a href="/contact">Contact</a>
+    </div>
+</nav>
+
+<div class="details">
+
+    <img src="/static/images/{{ product.image }}">
+
+    <h1>{{ product.name }}</h1>
+
+    <h2>{{ product.price }}</h2>
+
+    <p>{{ product.description }}</p>
+
+    <a href="https://wa.me/7894961506">
+        <button>Contact on WhatsApp</button>
+    </a>
+
+</div>
+
+</body>
+</html>
